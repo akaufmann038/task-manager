@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+    background-color:bisque;
+}
+
+p {
+    text-align: center;
+    padding: 10px;
+}
+
+#new-task {
+    text-align: left;
+}
+
+table {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #add-task {
+    height: 30px;
+    width: 30px;
+} */

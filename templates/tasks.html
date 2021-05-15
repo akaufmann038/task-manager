@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block content %}
+<table>
+    {% if task_content|length == 0 %}
+    <p>You have no tasks. Create some bellow.</p>
+    {% else %}
+    <tr>
+        <th>Task</th>
+        <th>Actions</th>
+    </tr>
+    {% for task in task_content %}
+    <tr>
+        <td>{{ task.content }}</td>
+        <td><a href="/delete/{{ task.id }}">Delete</a><br><a href="/update/{{ task.id }}">Update</a></td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    
+</table>
+<form action="" method="post" id="task-form">
+    <input type="text" name="new-task" placeholder="Enter a Task" id="new-task"/>
+    <button type="submit" name="add-task">Add Task</button>
+</form>
+
+{% endblock %}
